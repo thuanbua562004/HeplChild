@@ -1,0 +1,79 @@
+@tailwind base;        /* Cơ sở các kiểu mặc định của Tailwind */
+@tailwind components;   /* Các thành phần mặc định của Tailwind */
+@tailwind utilities;    /* Các tiện ích của Tailwind */
+
+
+body {
+    @apply font-normal;
+  }
+:root {
+  --color-main: #08cc7f;
+  --color-second: #F9A8D4;
+  --color-dark: #6B7280;
+  --text-main: #666666;
+}
+
+
+/* Mặc định light mode */
+.text-hover {
+  @apply text-text-main hover:text-color-main;
+}
+
+/* Khi dark mode */
+.dark .text-hover {
+  @apply  text-white hover:text-color-main;
+}
+
+.Intro-Right::after {
+  content: "";
+  display: block;
+  background-image: url('https://nasarna-react.wpocean.com/static/media/img-3.e68dae38.png');
+  background-size: contain; 
+  background-repeat: no-repeat;
+  
+  width: 836px;
+  height: 816px;
+  position: absolute;
+  right: 0%;
+  bottom: -60%;
+}
+@media (max-width: 1345px) {
+  .Intro-Right::after {
+    width: 500px;
+    height: 500px;
+    bottom: -20%;
+  }
+}
+@media (max-width: 971px) {
+  .Intro-Right::after {
+    display: none;
+  }
+}
+
+.before-play::before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 17px solid #08cc7f;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(360deg);
+  
+}
+
+.btn-close-login{
+  content: "";
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  margin: 4px 4px 0 0;
+  background-color:#08cc7f ;
+  border-radius: 50%;
+  cursor: pointer;
+}
