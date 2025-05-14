@@ -70,7 +70,7 @@ i18n
   .use(initReactI18next) // kết nối với React
   .init({
     resources,
-    fallbackLng: 'en', // nếu không phát hiện được thì dùng tiếng Anh
+    fallbackLng: 'English', // nếu không phát hiện được thì dùng tiếng Anh
     interpolation: {
       escapeValue: false,
     },
